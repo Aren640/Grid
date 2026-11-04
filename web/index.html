@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Todo FP | Formación Profesional</title>
+        <link href="css/estilo.css" rel="stylesheet">
+    </head>
+    <body id="todo">
+        <header id="cabecera" class="cajaRedonda">
+            <hgroup class="logo">
+                <h1>Todo FP</h1>
+                <p class="subtitulo">www.educacion.gob.es</p>
+            </hgroup>
+            <nav class="menu" aria-label="Navegación principal">
+                <ul>
+                    <li><a id="activo" href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="informacion.html">Información</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li><a href="alumnos.html">Alumnos</a></li>
+                    <li><a href="ayuda.html">Ayuda</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside id="izquierda" aria-label="Área de usuarios y unidades de trabajo">
+            <section class="separa" aria-labelledby="titulo-usuarios">
+                <h2 class="subtitu" id="titulo-usuarios">ÁREA DE USUARIOS</h2>
+                <form method="post" action="#">
+                    <label for="nombre">ID de Usuario:</label>
+                    <input id="nombre" name="nombre" type="text" autocomplete="username">
+                    <label for="paso">Contraseña:</label>
+                    <input id="paso" name="paso" type="password" autocomplete="current-password">
+                    <input id="acceder" name="Acceder" type="submit" value="Acceder">
+                </form>
+                <a href="">¿Olvidaste la contraseña?</a>
+            </section>
+
+            <section aria-labelledby="titulo-unidades">
+                <h2 class="subtitu" id="titulo-unidades">UNIDADES DE TRABAJO</h2>
+                <dl>
+                    <dt>DIW01, 2011</dt>
+                    <dd><a href="">Planificación de interfaces gráficas...</a></dd>
+                    <dt>DIW02, 2011</dt>
+                    <dd><a href="">Accesibilidad en la web...</a></dd>
+                    <dt>DIW03, 2011</dt>
+                    <dd><a href="">Usabilidad en la web...</a></dd>
+                    <dt>DIW04, 2011</dt>
+                    <dd><a href="">Hojas de estilos...</a></dd>
+                    <dt>DIW05, 2011</dt>
+                    <dd><a href="">Contenidos multimedia en la web: imágenes...</a></dd>
+                </dl>
+            </section>
+        </aside>
+
+        <main id="centro">
+            <article>
+                <header class="subtitu">
+                    <h2>¡BIENVENIDOS A TODOFP!</h2>
+                    <time class="fecha" datetime="2011-10-10">Oct. 10, 2011</time>
+                </header>
+                <p>FP a distancia. Esta oferta está dirigida especialmente a aquellas personas que, por diferentes razones (no solo laborales), no pueden cursar en los centros educativos y en horario presencial la <a href="https://www.educacion.gob.es/fponline.html">Formación Profesional</a>. Por tanto, mayoritariamente será el colectivo de personas adultas el destinatario de esta modalidad de enseñanza. Toda la información desde la web: <a href="https://www.educacion.gob.es/fponline.html">FP online</a>. ¡Matricúlate!</p>
+                <p class="peque">Realizado por Manuel Vieites <a href="https://www.mecd.gob.es/portada-mecd/">Todo FP</a> | <a href="https://www.mecd.gob.es/educacion-mecd/">Educación</a></p>
+            </article>
+
+            <article>
+                <header class="subtitu">
+                    <h2>DIW04. HOJAS DE ESTILOS.</h2>
+                    <time class="fecha" datetime="2011-10-10">Oct. 10, 2011</time>
+                </header>
+                <blockquote class="italica">Orden EDU/2887/2010, de 2 de noviembre, por la que se establece el currículo del ciclo formativo de Grado Superior correspondiente al título de Técnico Superior en Desarrollo de Aplicaciones Web.</blockquote>
+                <p>Técnicas, procedimiento y actitudes relacionadas:</p>
+                <ol>
+                    <li>Crear y vincular hojas de estilo</li>
+                    <li>Crear y vincular hojas de estilo en cascada externa</li>
+                </ol>
+                <p>Conceptos soporte relacionados:</p>
+                <ol>
+                    <li>Estilos en línea basados en etiquetas y en clases</li>
+                    <li>Hojas de estilo auditivas</li>
+                    <li>Hojas de estilo para imprimir</li>
+                    <li>Herramientas y test de verificación</li>
+                </ol>
+                <p class="peque">Realizado por Manuel Vieites <a href="">DIW</a> | <a href="https://www.mecd.gob.es/portada-mecd/">Todo FP</a></p>
+            </article>
+        </main>
+
+        <aside id="derecha" aria-labelledby="titulo-webs">
+            <h2 class="subtitu" id="titulo-webs">WEBS DE INTERÉS</h2>
+            <ul id="idli">
+                <li><a href="https://www.mecd.gob.es/portada-mecd/">TodoFP</a></li>
+                <li><a href="https://www.educacion.gob.es/fponline.html">FP on line</a></li>
+                <li><a href="https://www.edu.xunta.gal/">Platega</a></li>
+                <li><a href="https://www.iessanvicente.com/">IES San Clemente</a></li>
+            </ul>
+            <figure class="imCentro">
+                <img src="img/imagen.jpg" alt="Paisaje que ilustra la libertad de estudiar TodoFP">
+            </figure>
+        </aside>
+
+        <footer id="pie">
+            <p class="peque">Copyright &copy; 2011 TodoFP. Todos los derechos reservados. Diseñado por <a href="https://www.educacion.gob.es/">www.educacion.gob.es</a>.</p>
+        </footer>
+    </body>
+</html>

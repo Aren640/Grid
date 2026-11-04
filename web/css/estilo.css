@@ -1,0 +1,352 @@
+/* Estilos generales */
+:root {
+  --color-fondo: #f3f6f7;
+  --color-superficie: #fff;
+  --color-texto: #263238;
+  --color-suave: #607279;
+  --color-principal: #176b63;
+  --color-principal-oscuro: #104e49;
+  --color-acento: #f2b84b;
+  --color-borde: #dce6e4;
+  --sombra-panel: 0 0.5rem 1.5rem rgb(28 59 56 / 8%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 14rem minmax(0, 1fr) 12rem;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  grid-template-areas:
+    "cabecera cabecera cabecera"
+    "lateral-izquierdo contenido lateral-derecho"
+    "pie pie pie";
+  gap: 1.25rem;
+  width: min(100%, 90rem);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--color-principal);
+  font-weight: 700;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--color-principal-oscuro);
+}
+
+/* Cabecera */
+#cabecera {
+  grid-area: cabecera;
+  display: flex;
+  min-width: 0;
+  min-height: 8rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 1.75rem;
+  border: 0.06rem solid rgb(255 255 255 / 25%);
+  border-radius: 1.1rem;
+  background-color: var(--color-principal);
+  box-shadow: 0 0.75rem 1.5rem rgb(16 78 73 / 20%);
+}
+
+.logo {
+  margin: 0;
+}
+
+.logo h1 {
+  margin: 0;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0.1rem 0.3rem rgb(0 0 0 / 20%);
+}
+
+.subtitulo {
+  margin: 0;
+  color: #d9efeb;
+  font-weight: 700;
+}
+
+/* Navegación */
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li {
+  min-width: 5.5rem;
+  overflow: hidden;
+  border: 0.06rem solid rgb(255 255 255 / 55%);
+  border-radius: 0.55rem;
+  background-color: #fff;
+}
+
+.menu li a {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  color: var(--color-principal-oscuro);
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu li a:hover,
+.menu li #activo {
+  background-color: var(--color-acento);
+  color: #25302e;
+}
+
+.menu li #activo {
+  box-shadow: inset 0 -0.2rem 0 rgb(0 0 0 / 12%);
+}
+
+/* Contenido principal */
+#izquierda,
+#centro,
+#derecha {
+  min-width: 0;
+  padding: 1.35rem;
+  border: 0.06rem solid var(--color-borde);
+  border-radius: 0.85rem;
+  background-color: var(--color-superficie);
+  box-shadow: var(--sombra-panel);
+}
+
+#izquierda {
+  grid-area: lateral-izquierdo;
+}
+
+#centro {
+  grid-area: contenido;
+  display: grid;
+  align-content: start;
+  gap: 1.5rem;
+}
+
+#derecha {
+  grid-area: lateral-derecho;
+}
+
+.subtitu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.55rem;
+  background-color: var(--color-principal);
+  box-shadow: 0 0.25rem 0.6rem rgb(16 78 73 / 18%);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.subtitu h2 {
+  margin: 0;
+  font-size: inherit;
+}
+
+article > p {
+  margin: 0.75rem 0 1rem;
+  text-align: justify;
+}
+
+article > .peque {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.fecha {
+  flex: 0 0 auto;
+  color: #e6f0ee;
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+.peque {
+  color: var(--color-suave);
+  font-size: 0.8rem;
+}
+
+.italica {
+  margin: 1.25rem 0;
+  color: var(--color-suave);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+article ol {
+  padding-left: 1.5rem;
+}
+
+/* Formulario */
+#izquierda section + section {
+  margin-top: 1.5rem;
+}
+
+#izquierda form label {
+  display: block;
+  margin: 0.65rem 0 0.25rem;
+  font-size: 0.9rem;
+}
+
+#izquierda input[type="text"],
+#izquierda input[type="password"] {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 0.6rem 0.7rem;
+  border: 0.06rem solid #c6d5d2;
+  border-radius: 0.45rem;
+  background-color: #fbfdfc;
+  color: var(--color-texto);
+  font: inherit;
+}
+
+#izquierda input[type="text"]:focus-visible,
+#izquierda input[type="password"]:focus-visible {
+  outline: 0.15rem solid rgb(23 107 99 / 22%);
+  outline-offset: 0.1rem;
+  border-color: var(--color-principal);
+}
+
+#izquierda form input[type="submit"] {
+  margin: 0.8rem 0;
+  padding: 0.55rem 1rem;
+  border: 0;
+  border-radius: 0.45rem;
+  background-color: var(--color-principal);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#izquierda form input[type="submit"]:hover {
+  background-color: var(--color-principal-oscuro);
+}
+
+#izquierda input[type="submit"]:focus-visible {
+  outline: 0.15rem solid var(--color-principal-oscuro);
+  outline-offset: 0.1rem;
+}
+
+#izquierda dl {
+  margin: 0;
+}
+
+#izquierda dt {
+  margin: 0.8rem 0 0.2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+#izquierda dd {
+  margin-left: 0.5rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+#derecha ul {
+  padding-left: 1.5rem;
+}
+
+#derecha li {
+  margin-block: 0.35rem;
+  font-size: 0.9rem;
+}
+
+/* Imagen y pie de página */
+.imCentro {
+  margin: 1.25rem 0 0;
+}
+
+.imCentro img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.55rem;
+}
+
+#pie {
+  grid-area: pie;
+  padding: 1rem;
+  border-radius: 0.65rem;
+  background-color: var(--color-superficie);
+  box-shadow: var(--sombra-panel);
+  text-align: center;
+}
+
+#pie p {
+  margin: 0;
+}
+
+/* Diseño responsive */
+@media (max-width: 60rem) {
+  body {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "cabecera cabecera"
+      "lateral-izquierdo lateral-derecho"
+      "contenido contenido"
+      "pie pie";
+  }
+
+  #cabecera {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .menu,
+  .menu ul {
+    width: 100%;
+  }
+}
+
+@media (max-width: 40rem) {
+  body {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "cabecera"
+      "lateral-izquierdo"
+      "contenido"
+      "lateral-derecho"
+      "pie";
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  #cabecera {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .menu li {
+    flex: 1 1 6rem;
+  }
+
+  #izquierda,
+  #centro,
+  #derecha {
+    padding: 1rem;
+  }
+}
