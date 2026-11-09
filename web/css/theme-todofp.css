@@ -1,0 +1,67 @@
+/* Colores */
+:root {
+  --bg-portal: #f3f6f7;
+  --bg-card-ciclo: #fff;
+  --bg-formulario: #fbfdfc;
+  --text-main: #263238;
+  --text-muted: #607279;
+  --text-on-brand: #fff;
+  --text-on-accent: #25302e;
+  --text-subtitle: #d9efeb;
+  --text-date: #e6f0ee;
+  --brand-color: #176b63;
+  --brand-color-hover: #104e49;
+  --accent-color: #f2b84b;
+  --border-institucional: 0.06rem solid #dce6e4;
+  --border-header: 0.06rem solid rgb(255 255 255 / 25%);
+  --border-menu: 0.06rem solid rgb(255 255 255 / 55%);
+  --border-formulario: 0.06rem solid #c6d5d2;
+  --focus-outline: 0.15rem solid rgb(23 107 99 / 22%);
+  --shadow-panel: 0 0.5rem 1.5rem rgb(28 59 56 / 8%);
+  --shadow-header: 0 0.75rem 1.5rem rgb(16 78 73 / 20%);
+  --shadow-title: 0 0.1rem 0.3rem rgb(0 0 0 / 20%);
+  --shadow-subtitle: 0 0.25rem 0.6rem rgb(16 78 73 / 18%);
+  --shadow-active: inset 0 -0.2rem 0 rgb(0 0 0 / 12%);
+
+  /* Espaciados */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xs: 0.2rem;
+  --spacing-xs2: 0.25rem;
+  --spacing-sm2: 0.35rem;
+  --spacing-sm3: 0.4rem;
+  --spacing-md2: 0.5rem;
+  --spacing-md3: 0.55rem;
+  --spacing-md4: 0.65rem;
+  --spacing-md5: 0.7rem;
+  --spacing-md6: 0.75rem;
+  --spacing-md7: 0.8rem;
+  --spacing-lg2: 1rem;
+  --spacing-lg3: 1.25rem;
+  --spacing-lg4: 1.35rem;
+  --spacing-lg5: 1.5rem;
+  --spacing-lg6: 1.75rem;
+
+  /* Tipografia */
+  --font-headings: Arial, Helvetica, sans-serif;
+  --font-body: Arial, Helvetica, sans-serif;
+  --size-title-ciclo: 2rem;
+  --size-body: 1rem;
+  --size-small: 0.9rem;
+  --size-note: 0.8rem;
+  --size-date: 0.75rem;
+  --line-height-body: 1.6;
+  --line-height-heading: 1.4;
+  --letter-spacing-title: 0.02em;
+  --text-decoration-thickness: 0.08em;
+  --text-underline-offset: 0.15em;
+
+  /* radios */
+  --radius-header: 1.1rem;
+  --radius-panel: 0.85rem;
+  --radius-menu: 0.55rem;
+  --radius-form: 0.45rem;
+  --radius-footer: 0.65rem;
+  --outline-offset: 0.1rem;
+}
