@@ -11,6 +11,8 @@
   --text-date: #dfeefc;
   --brand-color: #0b5ea8;
   --brand-color-hover: #084c85;
+  --link-color: #0b5ea8;
+  --link-hover: #084c85;
   --accent-color: #d6a94a;
   --border-institucional: 0.06rem solid #d7e4f2;
   --border-header: 0.06rem solid rgb(255 255 255 / 25%);
@@ -73,12 +75,14 @@
     --bg-formulario: #182e41;
     --text-main: #edf6ff;
     --text-muted: #bfd3e4;
-    --text-on-brand: #ffffff;
-    --text-on-accent: #ecf5ff;
+    --text-on-brand: #edf8ff;
+    --text-on-accent: #172123;
     --text-subtitle: #dfeefc;
     --text-date: #dfeefc;
-    --brand-color: #4a9de1;
-    --brand-color-hover: #6db4f3;
+    --brand-color: #0c5ea2;
+    --brand-color-hover: #0b528c;
+    --link-color: #b8d9ff;
+    --link-hover: #eaf4ff;
     --accent-color: #d39d45;
     --border-institucional: 0.06rem solid #2c4f6d;
     --border-header: 0.06rem solid rgb(255 255 255 / 18%);

@@ -13,26 +13,27 @@ body {
     "contenido"
     "lateral-derecho"
     "pie";
-  gap: 1rem;
+  gap: var(--spacing-md);
   width: min(100%, 90rem);
   min-height: 100vh;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: var(--spacing-lg);
   background-color: var(--bg-portal);
   color: var(--text-main);
+  font-size: var(--size-body);
   font-family: var(--font-body);
   line-height: var(--line-height-body);
 }
 
 a {
-  color: var(--brand-color);
+  color: var(--link-color);
   font-weight: 700;
   text-decoration-thickness: var(--text-decoration-thickness);
   text-underline-offset: var(--text-underline-offset);
 }
 
 a:hover {
-  color: var(--brand-color-hover);
+  color: var(--link-hover);
 }
 
 /* Cabecera */
@@ -43,8 +44,8 @@ a:hover {
   min-width: 0;
   min-height: 8rem;
   align-items: flex-start;
-  gap: 1rem;
-  padding: 1rem;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
   border: var(--border-header);
   border-radius: var(--radius-header);
   background-color: var(--brand-color);
@@ -58,6 +59,7 @@ a:hover {
 .logo h1 {
   margin: 0;
   color: var(--text-on-brand);
+  font-size: var(--size-title-ciclo);
   font-family: var(--font-headings);
   letter-spacing: var(--letter-spacing-title);
   text-shadow: var(--shadow-title);
@@ -92,7 +94,7 @@ a:hover {
 .menu li a {
   display: block;
   padding: 0.55rem 0.75rem;
-  color: var(--brand-color-hover);
+  color: var(--link-color);
   font-size: var(--size-small);
   text-align: center;
   text-decoration: none;
@@ -128,7 +130,7 @@ a:hover {
   grid-area: contenido;
   display: grid;
   align-content: start;
-  gap: 1.5rem;
+  gap: var(--spacing-lg);
 }
 
 #derecha {
@@ -281,7 +283,7 @@ article ol {
 
 #pie {
   grid-area: pie;
-  padding: 1rem;
+  padding: var(--spacing-md);
   border-radius: var(--radius-footer);
   background-color: var(--bg-card-ciclo);
   box-shadow: var(--shadow-panel);
