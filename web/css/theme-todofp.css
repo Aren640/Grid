@@ -1,11 +1,11 @@
 /* Colores */
 :root {
   --bg-portal: #f3f6f7;
-  --bg-card-ciclo: #fff;
+  --bg-card-ciclo: #ffffff;
   --bg-formulario: #fbfdfc;
   --text-main: #263238;
   --text-muted: #607279;
-  --text-on-brand: #fff;
+  --text-on-brand: #ffffff;
   --text-on-accent: #25302e;
   --text-subtitle: #d9efeb;
   --text-date: #e6f0ee;
@@ -43,7 +43,7 @@
   --spacing-lg5: 1.5rem;
   --spacing-lg6: 1.75rem;
 
-  /* Tipografia */
+  /* Tipografía */
   --font-headings: Arial, Helvetica, sans-serif;
   --font-body: Arial, Helvetica, sans-serif;
   --size-title-ciclo: 2rem;
@@ -64,4 +64,31 @@
   --radius-form: 0.45rem;
   --radius-footer: 0.65rem;
   --outline-offset: 0.1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-portal: #111b20;
+    --bg-card-ciclo: #1a272d;
+    --bg-formulario: #192a30;
+    --text-main: #ebf2f3;
+    --text-muted: #b7c7cb;
+    --text-on-brand: #f4fbff;
+    --text-on-accent: #edf5f3;
+    --text-subtitle: #d9efeb;
+    --text-date: #cfe2e5;
+    --brand-color: #1a8d82;
+    --brand-color-hover: #2bb2a4;
+    --accent-color: #d69d2c;
+    --border-institucional: 0.06rem solid #2f454d;
+    --border-header: 0.06rem solid rgb(255 255 255 / 18%);
+    --border-menu: 0.06rem solid rgb(255 255 255 / 32%);
+    --border-formulario: 0.06rem solid #425c62;
+    --focus-outline: 0.15rem solid rgb(26 141 130 / 35%);
+    --shadow-panel: 0 0.5rem 1.5rem rgb(0 0 0 / 26%);
+    --shadow-header: 0 0.75rem 1.5rem rgb(0 0 0 / 28%);
+    --shadow-title: 0 0.1rem 0.3rem rgb(0 0 0 / 28%);
+    --shadow-subtitle: 0 0.25rem 0.6rem rgb(0 0 0 / 26%);
+    --shadow-active: inset 0 -0.2rem 0 rgb(0 0 0 / 22%);
+  }
 }

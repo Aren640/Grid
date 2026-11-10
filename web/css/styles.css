@@ -1,16 +1,4 @@
 /* Estilos generales */
-:root {
-  --color-fondo: #f3f6f7;
-  --color-superficie: #fff;
-  --color-texto: #263238;
-  --color-suave: #607279;
-  --color-principal: #176b63;
-  --color-principal-oscuro: #104e49;
-  --color-acento: #f2b84b;
-  --color-borde: #dce6e4;
-  --sombra-panel: 0 0.5rem 1.5rem rgb(28 59 56 / 8%);
-}
-
 * {
   box-sizing: border-box;
 }
@@ -30,21 +18,21 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   padding: 1.5rem;
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+  background-color: var(--bg-portal);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: var(--line-height-body);
 }
 
 a {
-  color: var(--color-principal);
+  color: var(--brand-color);
   font-weight: 700;
-  text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.15em;
+  text-decoration-thickness: var(--text-decoration-thickness);
+  text-underline-offset: var(--text-underline-offset);
 }
 
 a:hover {
-  color: var(--color-principal-oscuro);
+  color: var(--brand-color-hover);
 }
 
 /* Cabecera */
@@ -57,10 +45,10 @@ a:hover {
   align-items: flex-start;
   gap: 1rem;
   padding: 1rem;
-  border: 0.06rem solid rgb(255 255 255 / 25%);
-  border-radius: 1.1rem;
-  background-color: var(--color-principal);
-  box-shadow: 0 0.75rem 1.5rem rgb(16 78 73 / 20%);
+  border: var(--border-header);
+  border-radius: var(--radius-header);
+  background-color: var(--brand-color);
+  box-shadow: var(--shadow-header);
 }
 
 .logo {
@@ -69,14 +57,15 @@ a:hover {
 
 .logo h1 {
   margin: 0;
-  color: #fff;
-  letter-spacing: 0.02em;
-  text-shadow: 0 0.1rem 0.3rem rgb(0 0 0 / 20%);
+  color: var(--text-on-brand);
+  font-family: var(--font-headings);
+  letter-spacing: var(--letter-spacing-title);
+  text-shadow: var(--shadow-title);
 }
 
 .subtitulo {
   margin: 0;
-  color: #d9efeb;
+  color: var(--text-subtitle);
   font-weight: 700;
 }
 
@@ -95,28 +84,28 @@ a:hover {
   flex: 1 1 6rem;
   min-width: 5.5rem;
   overflow: hidden;
-  border: 0.06rem solid rgb(255 255 255 / 55%);
-  border-radius: 0.55rem;
-  background-color: #fff;
+  border: var(--border-menu);
+  border-radius: var(--radius-menu);
+  background-color: var(--bg-card-ciclo);
 }
 
 .menu li a {
   display: block;
   padding: 0.55rem 0.75rem;
-  color: var(--color-principal-oscuro);
-  font-size: 0.9rem;
+  color: var(--brand-color-hover);
+  font-size: var(--size-small);
   text-align: center;
   text-decoration: none;
 }
 
 .menu li a:hover,
 .menu li #activo {
-  background-color: var(--color-acento);
-  color: #25302e;
+  background-color: var(--accent-color);
+  color: var(--text-on-accent);
 }
 
 .menu li #activo {
-  box-shadow: inset 0 -0.2rem 0 rgb(0 0 0 / 12%);
+  box-shadow: var(--shadow-active);
 }
 
 /* Contenido principal */
@@ -125,10 +114,10 @@ a:hover {
 #derecha {
   min-width: 0;
   padding: 1.35rem;
-  border: 0.06rem solid var(--color-borde);
-  border-radius: 0.85rem;
-  background-color: var(--color-superficie);
-  box-shadow: var(--sombra-panel);
+  border: var(--border-institucional);
+  border-radius: var(--radius-panel);
+  background-color: var(--bg-card-ciclo);
+  box-shadow: var(--shadow-panel);
 }
 
 #izquierda {
@@ -153,13 +142,14 @@ a:hover {
   gap: 1rem;
   margin: 0 0 1rem;
   padding: 0.75rem 1rem;
-  border-radius: 0.55rem;
-  background-color: var(--color-principal);
-  box-shadow: 0 0.25rem 0.6rem rgb(16 78 73 / 18%);
-  color: #fff;
-  font-size: 0.9rem;
+  border-radius: var(--radius-menu);
+  background-color: var(--brand-color);
+  box-shadow: var(--shadow-subtitle);
+  color: var(--text-on-brand);
+  font-size: var(--size-small);
+  font-family: var(--font-headings);
   font-weight: 700;
-  line-height: 1.4;
+  line-height: var(--line-height-heading);
 }
 
 .subtitu h2 {
@@ -179,20 +169,20 @@ article > .peque {
 
 .fecha {
   flex: 0 0 auto;
-  color: #e6f0ee;
-  font-size: 0.75rem;
+  color: var(--text-date);
+  font-size: var(--size-date);
   text-align: right;
 }
 
 .peque {
-  color: var(--color-suave);
-  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-size: var(--size-note);
 }
 
 .italica {
   margin: 1.25rem 0;
-  color: var(--color-suave);
-  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-size: var(--size-small);
   font-style: italic;
 }
 
@@ -217,39 +207,39 @@ article ol {
   width: 100%;
   min-width: 0;
   padding: 0.6rem 0.7rem;
-  border: 0.06rem solid #c6d5d2;
-  border-radius: 0.45rem;
-  background-color: #fbfdfc;
-  color: var(--color-texto);
+  border: var(--border-formulario);
+  border-radius: var(--radius-form);
+  background-color: var(--bg-formulario);
+  color: var(--text-main);
   font: inherit;
 }
 
 #izquierda input[type="text"]:focus-visible,
 #izquierda input[type="password"]:focus-visible {
-  outline: 0.15rem solid rgb(23 107 99 / 22%);
-  outline-offset: 0.1rem;
-  border-color: var(--color-principal);
+  outline: var(--focus-outline);
+  outline-offset: var(--outline-offset);
+  border-color: var(--brand-color);
 }
 
 #izquierda form input[type="submit"] {
   margin: 0.8rem 0;
   padding: 0.55rem 1rem;
   border: 0;
-  border-radius: 0.45rem;
-  background-color: var(--color-principal);
-  color: #fff;
+  border-radius: var(--radius-form);
+  background-color: var(--brand-color);
+  color: var(--text-on-brand);
   font: inherit;
   font-weight: 700;
   cursor: pointer;
 }
 
 #izquierda form input[type="submit"]:hover {
-  background-color: var(--color-principal-oscuro);
+  background-color: var(--brand-color-hover);
 }
 
 #izquierda input[type="submit"]:focus-visible {
-  outline: 0.15rem solid var(--color-principal-oscuro);
-  outline-offset: 0.1rem;
+  outline: var(--focus-outline);
+  outline-offset: var(--outline-offset);
 }
 
 #izquierda dl {
@@ -286,15 +276,15 @@ article ol {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 0.55rem;
+  border-radius: var(--radius-menu);
 }
 
 #pie {
   grid-area: pie;
   padding: 1rem;
-  border-radius: 0.65rem;
-  background-color: var(--color-superficie);
-  box-shadow: var(--sombra-panel);
+  border-radius: var(--radius-footer);
+  background-color: var(--bg-card-ciclo);
+  box-shadow: var(--shadow-panel);
   text-align: center;
 }
 

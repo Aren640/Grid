@@ -1,0 +1,94 @@
+/* Colores */
+:root {
+  --bg-portal: #eef5fb;
+  --bg-card-ciclo: #ffffff;
+  --bg-formulario: #f8fbff;
+  --text-main: #1d2d3d;
+  --text-muted: #587084;
+  --text-on-brand: #ffffff;
+  --text-on-accent: #183149;
+  --text-subtitle: #dfeefc;
+  --text-date: #dfeefc;
+  --brand-color: #0b5ea8;
+  --brand-color-hover: #084c85;
+  --accent-color: #d6a94a;
+  --border-institucional: 0.06rem solid #d7e4f2;
+  --border-header: 0.06rem solid rgb(255 255 255 / 25%);
+  --border-menu: 0.06rem solid rgb(255 255 255 / 55%);
+  --border-formulario: 0.06rem solid #c7d9eb;
+  --focus-outline: 0.15rem solid rgb(11 94 168 / 22%);
+  --shadow-panel: 0 0.5rem 1.5rem rgb(14 49 77 / 8%);
+  --shadow-header: 0 0.75rem 1.5rem rgb(8 76 133 / 18%);
+  --shadow-title: 0 0.1rem 0.3rem rgb(0 0 0 / 20%);
+  --shadow-subtitle: 0 0.25rem 0.6rem rgb(8 76 133 / 18%);
+  --shadow-active: inset 0 -0.2rem 0 rgb(0 0 0 / 12%);
+
+  /* Espaciados */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xs: 0.2rem;
+  --spacing-xs2: 0.25rem;
+  --spacing-sm2: 0.35rem;
+  --spacing-sm3: 0.4rem;
+  --spacing-md2: 0.5rem;
+  --spacing-md3: 0.55rem;
+  --spacing-md4: 0.65rem;
+  --spacing-md5: 0.7rem;
+  --spacing-md6: 0.75rem;
+  --spacing-md7: 0.8rem;
+  --spacing-lg2: 1rem;
+  --spacing-lg3: 1.25rem;
+  --spacing-lg4: 1.35rem;
+  --spacing-lg5: 1.5rem;
+  --spacing-lg6: 1.75rem;
+
+  /* Tipografía */
+  --font-headings: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+  --font-body: "Segoe UI", Arial, sans-serif;
+  --size-title-ciclo: 1.9rem;
+  --size-body: 1rem;
+  --size-small: 0.9rem;
+  --size-note: 0.8rem;
+  --size-date: 0.75rem;
+  --line-height-body: 1.6;
+  --line-height-heading: 1.4;
+  --letter-spacing-title: 0.02em;
+  --text-decoration-thickness: 0.08em;
+  --text-underline-offset: 0.15em;
+
+  /* radios */
+  --radius-header: 1.1rem;
+  --radius-panel: 0.85rem;
+  --radius-menu: 0.55rem;
+  --radius-form: 0.45rem;
+  --radius-footer: 0.65rem;
+  --outline-offset: 0.1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-portal: #0f1723;
+    --bg-card-ciclo: #172a38;
+    --bg-formulario: #182e41;
+    --text-main: #edf6ff;
+    --text-muted: #bfd3e4;
+    --text-on-brand: #ffffff;
+    --text-on-accent: #ecf5ff;
+    --text-subtitle: #dfeefc;
+    --text-date: #dfeefc;
+    --brand-color: #4a9de1;
+    --brand-color-hover: #6db4f3;
+    --accent-color: #d39d45;
+    --border-institucional: 0.06rem solid #2c4f6d;
+    --border-header: 0.06rem solid rgb(255 255 255 / 18%);
+    --border-menu: 0.06rem solid rgb(255 255 255 / 32%);
+    --border-formulario: 0.06rem solid #3d6a8c;
+    --focus-outline: 0.15rem solid rgb(74 157 225 / 35%);
+    --shadow-panel: 0 0.5rem 1.5rem rgb(0 0 0 / 28%);
+    --shadow-header: 0 0.75rem 1.5rem rgb(0 0 0 / 30%);
+    --shadow-title: 0 0.1rem 0.3rem rgb(0 0 0 / 28%);
+    --shadow-subtitle: 0 0.25rem 0.6rem rgb(0 0 0 / 26%);
+    --shadow-active: inset 0 -0.2rem 0 rgb(0 0 0 / 22%);
+  }
+}
