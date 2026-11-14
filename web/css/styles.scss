@@ -1,0 +1,361 @@
+
+// Contorno compartido por los campos y el botón del formulario.
+@mixin foco-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--outline-offset);
+}
+
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "cabecera"
+    "lateral-izquierdo"
+    "contenido"
+    "lateral-derecho"
+    "pie";
+  gap: var(--spacing-md);
+  width: min(100%, 90rem);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  background-color: var(--bg-portal);
+  color: var(--text-main);
+  font-size: var(--size-body);
+  font-family: var(--font-body);
+  line-height: var(--line-height-body);
+}
+
+a {
+  color: var(--link-color);
+  font-weight: 700;
+  text-decoration-thickness: var(--text-decoration-thickness);
+  text-underline-offset: var(--text-underline-offset);
+
+  &:hover {
+    color: var(--link-hover);
+  }
+}
+
+/* Cabecera */
+#cabecera {
+  grid-area: cabecera;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 8rem;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  border: var(--border-header);
+  border-radius: var(--radius-header);
+  background-color: var(--brand-color);
+  box-shadow: var(--shadow-header);
+}
+
+.logo {
+  margin: 0;
+
+  h1 {
+    margin: 0;
+    color: var(--text-on-brand);
+    font-size: var(--size-title-ciclo);
+    font-family: var(--font-headings);
+    letter-spacing: var(--letter-spacing-title);
+    text-shadow: var(--shadow-title);
+  }
+}
+
+.subtitulo {
+  margin: 0;
+  color: var(--text-subtitle);
+  font-weight: 700;
+}
+
+/* Navegación */
+.menu {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    flex: 1 1 6rem;
+    min-width: 5.5rem;
+    overflow: hidden;
+    border: var(--border-menu);
+    border-radius: var(--radius-menu);
+    background-color: var(--bg-card-ciclo);
+
+    a {
+      display: block;
+      padding: 0.55rem 0.75rem;
+      color: var(--link-color);
+      font-size: var(--size-small);
+      text-align: center;
+      text-decoration: none;
+    }
+
+    a:hover,
+    #activo {
+      background-color: var(--accent-color);
+      color: var(--text-on-accent);
+    }
+
+    #activo {
+      box-shadow: var(--shadow-active);
+    }
+  }
+}
+
+/* Contenido principal */
+#izquierda,
+#centro,
+#derecha {
+  min-width: 0;
+  padding: 1.35rem;
+  border: var(--border-institucional);
+  border-radius: var(--radius-panel);
+  background-color: var(--bg-card-ciclo);
+  box-shadow: var(--shadow-panel);
+}
+
+#izquierda {
+  grid-area: lateral-izquierdo;
+}
+
+#centro {
+  grid-area: contenido;
+  display: grid;
+  align-content: start;
+  gap: var(--spacing-lg);
+}
+
+#derecha {
+  grid-area: lateral-derecho;
+}
+
+.subtitu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-menu);
+  background-color: var(--brand-color);
+  box-shadow: var(--shadow-subtitle);
+  color: var(--text-on-brand);
+  font-size: var(--size-small);
+  font-family: var(--font-headings);
+  font-weight: 700;
+  line-height: var(--line-height-heading);
+
+  h2 {
+    margin: 0;
+    font-size: inherit;
+  }
+}
+
+article {
+  > p {
+    margin: 0.75rem 0 1rem;
+    text-align: justify;
+  }
+
+  > .peque {
+    margin-top: 1rem;
+    text-align: left;
+  }
+
+  ol {
+    padding-left: 1.5rem;
+  }
+}
+
+.fecha {
+  flex: 0 0 auto;
+  color: var(--text-date);
+  font-size: var(--size-date);
+  text-align: right;
+}
+
+.peque {
+  color: var(--text-muted);
+  font-size: var(--size-note);
+}
+
+.italica {
+  margin: 1.25rem 0;
+  color: var(--text-muted);
+  font-size: var(--size-small);
+  font-style: italic;
+}
+
+/* Formulario */
+#izquierda {
+  section + section {
+    margin-top: 1.5rem;
+  }
+
+  form label {
+    display: block;
+    margin: 0.65rem 0 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 0.6rem 0.7rem;
+    border: var(--border-formulario);
+    border-radius: var(--radius-form);
+    background-color: var(--bg-formulario);
+    color: var(--text-main);
+    font: inherit;
+
+    &:focus-visible {
+      @include foco-visible;
+      border-color: var(--brand-color);
+    }
+  }
+
+  form input[type="submit"] {
+    margin: 0.8rem 0;
+    padding: 0.55rem 1rem;
+    border: 0;
+    border-radius: var(--radius-form);
+    background-color: var(--brand-color);
+    color: var(--text-on-brand);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--brand-color-hover);
+    }
+  }
+
+  input[type="submit"]:focus-visible {
+    @include foco-visible;
+  }
+
+  dl {
+    margin: 0;
+  }
+
+  dt {
+    margin: 0.8rem 0 0.2rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  dd {
+    margin-left: 0.5rem;
+    padding-bottom: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+#derecha {
+  ul {
+    padding-left: 1.5rem;
+  }
+
+  li {
+    margin-block: 0.35rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Imagen y pie de página */
+.imCentro {
+  margin: 1.25rem 0 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-menu);
+  }
+}
+
+#pie {
+  grid-area: pie;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-footer);
+  background-color: var(--bg-card-ciclo);
+  box-shadow: var(--shadow-panel);
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+/* Diseño responsive */
+@media (min-width: 48rem) {
+  body {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "cabecera cabecera"
+      "lateral-izquierdo lateral-derecho"
+      "contenido contenido"
+      "pie pie";
+  }
+
+  #cabecera {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu {
+    &,
+    ul {
+      width: auto;
+    }
+
+    li {
+      flex: initial;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  body {
+    grid-template-columns: 14rem minmax(0, 1fr) 12rem;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "cabecera cabecera cabecera"
+      "lateral-izquierdo contenido lateral-derecho"
+      "pie pie pie";
+    gap: 1.25rem;
+  }
+
+  #cabecera {
+    gap: 1.5rem;
+    padding: 1.25rem 1.75rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  body {
+    width: min(100%, 90rem);
+    margin: 0 auto;
+  }
+}

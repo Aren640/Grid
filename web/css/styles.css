@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Estilos generales */
 * {
   box-sizing: border-box;
@@ -7,12 +8,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-template-areas:
-    "cabecera"
-    "lateral-izquierdo"
-    "contenido"
-    "lateral-derecho"
-    "pie";
+  grid-template-areas: "cabecera" "lateral-izquierdo" "contenido" "lateral-derecho" "pie";
   gap: var(--spacing-md);
   width: min(100%, 90rem);
   min-height: 100vh;
@@ -31,7 +27,6 @@ a {
   text-decoration-thickness: var(--text-decoration-thickness);
   text-underline-offset: var(--text-underline-offset);
 }
-
 a:hover {
   color: var(--link-hover);
 }
@@ -55,7 +50,6 @@ a:hover {
 .logo {
   margin: 0;
 }
-
 .logo h1 {
   margin: 0;
   color: var(--text-on-brand);
@@ -81,7 +75,6 @@ a:hover {
   padding: 0;
   list-style: none;
 }
-
 .menu li {
   flex: 1 1 6rem;
   min-width: 5.5rem;
@@ -90,7 +83,6 @@ a:hover {
   border-radius: var(--radius-menu);
   background-color: var(--bg-card-ciclo);
 }
-
 .menu li a {
   display: block;
   padding: 0.55rem 0.75rem;
@@ -99,13 +91,11 @@ a:hover {
   text-align: center;
   text-decoration: none;
 }
-
 .menu li a:hover,
 .menu li #activo {
   background-color: var(--accent-color);
   color: var(--text-on-accent);
 }
-
 .menu li #activo {
   box-shadow: var(--shadow-active);
 }
@@ -153,7 +143,6 @@ a:hover {
   font-weight: 700;
   line-height: var(--line-height-heading);
 }
-
 .subtitu h2 {
   margin: 0;
   font-size: inherit;
@@ -163,10 +152,12 @@ article > p {
   margin: 0.75rem 0 1rem;
   text-align: justify;
 }
-
 article > .peque {
   margin-top: 1rem;
   text-align: left;
+}
+article ol {
+  padding-left: 1.5rem;
 }
 
 .fecha {
@@ -188,23 +179,17 @@ article > .peque {
   font-style: italic;
 }
 
-article ol {
-  padding-left: 1.5rem;
-}
-
 /* Formulario */
 #izquierda section + section {
   margin-top: 1.5rem;
 }
-
 #izquierda form label {
   display: block;
   margin: 0.65rem 0 0.25rem;
   font-size: 0.9rem;
 }
-
-#izquierda input[type="text"],
-#izquierda input[type="password"] {
+#izquierda input[type=text],
+#izquierda input[type=password] {
   display: block;
   width: 100%;
   min-width: 0;
@@ -215,15 +200,13 @@ article ol {
   color: var(--text-main);
   font: inherit;
 }
-
-#izquierda input[type="text"]:focus-visible,
-#izquierda input[type="password"]:focus-visible {
+#izquierda input[type=text]:focus-visible,
+#izquierda input[type=password]:focus-visible {
   outline: var(--focus-outline);
   outline-offset: var(--outline-offset);
   border-color: var(--brand-color);
 }
-
-#izquierda form input[type="submit"] {
+#izquierda form input[type=submit] {
   margin: 0.8rem 0;
   padding: 0.55rem 1rem;
   border: 0;
@@ -234,26 +217,21 @@ article ol {
   font-weight: 700;
   cursor: pointer;
 }
-
-#izquierda form input[type="submit"]:hover {
+#izquierda form input[type=submit]:hover {
   background-color: var(--brand-color-hover);
 }
-
-#izquierda input[type="submit"]:focus-visible {
+#izquierda input[type=submit]:focus-visible {
   outline: var(--focus-outline);
   outline-offset: var(--outline-offset);
 }
-
 #izquierda dl {
   margin: 0;
 }
-
 #izquierda dt {
   margin: 0.8rem 0 0.2rem;
   font-size: 0.9rem;
   font-weight: 700;
 }
-
 #izquierda dd {
   margin-left: 0.5rem;
   padding-bottom: 0.75rem;
@@ -263,7 +241,6 @@ article ol {
 #derecha ul {
   padding-left: 1.5rem;
 }
-
 #derecha li {
   margin-block: 0.35rem;
   font-size: 0.9rem;
@@ -273,7 +250,6 @@ article ol {
 .imCentro {
   margin: 1.25rem 0 0;
 }
-
 .imCentro img {
   display: block;
   width: 100%;
@@ -289,7 +265,6 @@ article ol {
   box-shadow: var(--shadow-panel);
   text-align: center;
 }
-
 #pie p {
   margin: 0;
 }
@@ -299,49 +274,36 @@ article ol {
   body {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-rows: auto auto minmax(0, 1fr) auto;
-    grid-template-areas:
-      "cabecera cabecera"
-      "lateral-izquierdo lateral-derecho"
-      "contenido contenido"
-      "pie pie";
+    grid-template-areas: "cabecera cabecera" "lateral-izquierdo lateral-derecho" "contenido contenido" "pie pie";
   }
-
   #cabecera {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
-
   .menu,
   .menu ul {
     width: auto;
   }
-
   .menu li {
     flex: initial;
   }
 }
-
 @media (min-width: 64rem) {
   body {
     grid-template-columns: 14rem minmax(0, 1fr) 12rem;
     grid-template-rows: auto minmax(0, 1fr) auto;
-    grid-template-areas:
-      "cabecera cabecera cabecera"
-      "lateral-izquierdo contenido lateral-derecho"
-      "pie pie pie";
+    grid-template-areas: "cabecera cabecera cabecera" "lateral-izquierdo contenido lateral-derecho" "pie pie pie";
     gap: 1.25rem;
   }
-
   #cabecera {
     gap: 1.5rem;
     padding: 1.25rem 1.75rem;
   }
 }
-
 @media (min-width: 80rem) {
   body {
     width: min(100%, 90rem);
     margin: 0 auto;
   }
-}
+}/*# sourceMappingURL=styles.css.map */
